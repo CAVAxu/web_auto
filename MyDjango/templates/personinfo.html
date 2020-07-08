@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客园</title>
+</head>
+<body>
+    <h1 style="background-color: #1378ed">昵称: {{ nicheng }}</h1>
+    <div style="background-color: #33c6eb">
+        <p>年龄: {{ age }}</p>
+        <p>关注: {{ MyBlog.guanzhu }}</p>
+        <p>粉丝: {{ MyBlog.fans }}</p>
+        <p>兴趣爱好: {{ fancy.0 }} / {{ fancy.1 }} / {{ fancy.2 }}</p>
+    </div>
+    <div>
+        <h1>通过字典键值取值</h1>
+        <p>博客地址
+        <a href="{{ blog.url }}" target="_blank">{{ blog.url }}</a>
+        </p>
+        <p>
+            <img src="{{ blog.img }}">
+        </p>
+    </div>
+    <!--<div>
+        <p>name: {{ MyBlog.name }}</p>
+        <p>关注数: {{ MyBlog.guanzhu }}</p>
+        <p>粉丝: {{ MyBlog.fans }}</p>
+    </div-->
+<div>
+    <h2>
+        <a href="{% url 'register' %}" target="_blank" style="background-color:#00FFFF;">如果没注册过，那就点我注册呀！</a>
+    </h2>
+    <h2>
+        <a href="{% url 'login1' %}" target="_blank" style="background-color:#00FFFF;">如果已经注册过，那就点我登录呀！</a>
+        </h2>
+</div>
+</body>
+</html>

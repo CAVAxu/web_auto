@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for name in nav_name %}
+    <h2>{{ name.type }}</h2>
+    <p>
+    {% for i in name.value %}
+        <span style="background-color: #7a807b">
+            {{ i }}{% if not forloop.last %} |
+                {% endif %}
+        </span>
+    {% endfor %}
+    </p>
+    {% empty %}
+    <span>无标签</span>
+{% endfor %}
+
+</body>
+</html>
